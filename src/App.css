@@ -3,9 +3,25 @@
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  position: relative;
 }
 
-@media (max-width: 568px) {
+.app_background {
+  display: none;
+}
 
+
+@media (max-width: 568px) {
+  .app {
+    background-image: none;
+  }
+
+  .app_background {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
 }
