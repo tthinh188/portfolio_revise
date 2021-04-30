@@ -1,0 +1,28 @@
+.skill {
+    display: grid;
+    padding: 20px 40px;
+    align-items: center;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+}
+
+.skill_levelContainer {
+    background-color: gray;
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.skill_level {
+    /* background-color: rgb(22, 58, 158); */
+    background: linear-gradient(to right,
+    rgb(39, 116, 233), rgb(22, 13, 138));
+    height: 100%;
+    border-radius: 20px;
+}
+
+.skill_amount {
+    position: absolute;
+    top: 5px;
+}

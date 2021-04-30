@@ -1,0 +1,22 @@
+.projects {
+    padding: 30px;
+}
+
+.projects_title {
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cards {
+    display: grid;
+    gap: 50px;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+}
+
+@media (max-width: 568px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+}

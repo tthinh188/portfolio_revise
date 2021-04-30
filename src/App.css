@@ -1,0 +1,11 @@
+.app {
+  background-image: url('/src/assets/background.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 568px) {
+
+}

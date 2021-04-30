@@ -1,0 +1,86 @@
+.card {
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 350px;
+    padding: 10rem 0 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.card:hover, .card:focus-within {
+    transform: scale(1.05);
+}
+
+.card:hover .card_title::after {
+    transform: scaleX(1)
+}
+
+.card_container {
+    margin-top: 100px;
+    --padding: 1.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    padding: var(--padding);
+    position: relative;
+    transform: translateY(75%);
+    transition: transform 0.5s ease;
+    transition-delay: 0.3s;
+    min-height: 200px;
+}
+
+.card_container > *:not(.card_title) {
+    opacity: 0;
+    transition: 0.5s linear;
+}
+
+.card:hover .card_container > * {
+    transition-delay: 0.8s;
+    opacity: 1;
+}
+
+.card:hover .card_container {
+    transform: translateY(0);
+}
+
+.card_title {
+    position: relative;
+    width: max-content;
+}
+
+.card_title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding) * -1);
+    bottom: -15px;
+    width: calc(100% + var(--padding));
+    background: lime;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+
+}
+
+.card_description {
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.card_button {
+    margin-right: 20px;
+}
+
+@media (max-width: 568px) {
+    .card {
+        height: 300px;
+        width: 300px;
+    }
+
+    .card_container {
+        margin-top: 50px;
+
+    }
+}

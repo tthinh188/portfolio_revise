@@ -1,0 +1,112 @@
+.about {
+    padding-top: 50px;
+    min-height: 80vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.about_container {
+    display: flex;
+    margin-top: 20px;
+    min-height: 80vh;
+}
+
+.about_container img {
+    object-fit: contain;
+    height: 250px;
+    padding-left: 20px;
+}
+
+.about_description {
+    padding-left: 40px;
+    text-align: left;
+}
+
+.about_descriptionOptions {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.about_descriptionOptions h2 {
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    font-weight: 500;
+}
+
+.about_descriptionOptions h2:hover {
+    color:rgb(243, 91, 31);
+}
+
+.about_descriptionOptions h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 70%;
+    bottom: -10px;
+    background-color: rgb(243, 91, 31);
+    height: 3px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background-color: rgb(243, 91, 31);
+    height: 3px;
+}
+
+.active {
+    color: rgb(243, 91, 31);
+}
+
+.about_descriptionOptions h2:hover::after {
+    right: 0;
+}
+
+.about_me p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.education {
+    color: gray;
+}
+
+.education p {
+    padding: 20px 0;
+}
+
+.description_info {
+    margin-top: 90px;
+}
+
+@media (max-width: 568px) {
+    .about_container {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .about_container img {
+        margin: auto;
+    }
+
+    .about_description {
+        margin: 20px 0;
+        
+    }
+
+    .about_descriptionOptions {
+        justify-content: space-evenly;
+    }
+}

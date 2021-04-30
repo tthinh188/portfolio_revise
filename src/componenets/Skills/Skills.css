@@ -1,0 +1,15 @@
+.skills {
+    min-height: 80vh;
+    color: white;
+}
+
+.skills h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.skills_description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
