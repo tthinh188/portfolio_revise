@@ -9,29 +9,30 @@ import { IconButton } from '@material-ui/core';
 const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [selectedMenuOption, setSelectedMenuOption] = useState('Home');
-    
+
     const handleShowMenu = () => {
         if (showMenu) {
             setShowMenu(false);
         }
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         const about = document.getElementById('about').getBoundingClientRect();
         const skills = document.getElementById('skills').getBoundingClientRect();
         const projects = document.getElementById('projects').getBoundingClientRect();
         const contact = document.getElementById('contact').getBoundingClientRect();
-        const initialPosition = window.scrollY;
-        
-        window.addEventListener("scroll",() =>{
-            if ((window.scrollY - initialPosition) >= contact.y - 200) setSelectedMenuOption("Contact");
+        const initialPosition = window.scrollY; // when refresh page.
+
+
+        window.addEventListener("scroll", () => {
+            if ((window.scrollY - initialPosition) >= contact.y - 100) setSelectedMenuOption("Contact");
             else if ((window.scrollY - initialPosition) >= projects.y - 100) setSelectedMenuOption("Projects");
             else if ((window.scrollY - initialPosition) >= skills.y - 100) setSelectedMenuOption("Skills");
             else if ((window.scrollY - initialPosition) >= about.y - 100) setSelectedMenuOption("About");
             else setSelectedMenuOption("Home");
         });
     }, [])
-        
+
     return (
         <div onClick={handleShowMenu} className="nav">
             <ul className={`nav_menu ${showMenu && 'show'}`}>

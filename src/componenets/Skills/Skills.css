@@ -1,6 +1,8 @@
 .skills {
-    min-height: 80vh;
+    min-height: 100vh;
     color: white;
+    padding: 40px 20px;
+    background-color: rgba(47, 235, 203, 0.2);
 }
 
 .skills h2 {
@@ -9,7 +11,14 @@
 }
 
 .skills_description {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
     margin-top: 50px;
+}
+
+@media (max-width: 920px) {
+    .skills_description {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
