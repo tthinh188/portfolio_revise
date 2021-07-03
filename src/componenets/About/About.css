@@ -94,6 +94,16 @@
 .description_info button {
     margin-top: 30px;
 }
+
+.job {
+    margin-bottom: 20px;
+}
+
+.experience_time {
+    color: lightgray;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
 .resume_download {
     text-decoration: none;
     color: white;
