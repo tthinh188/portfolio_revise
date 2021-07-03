@@ -125,6 +125,14 @@
     }
 
     .about_descriptionOptions {
-        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
     }
+
+    .about_descriptionOptions h2 {
+        margin: 20px;
+    }
+
+    
+    
 }
