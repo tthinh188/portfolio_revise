@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import './About.css';
 import profile from '../../assets/profile.jpg'
+import resume from '../../assets/ThinhPhanResume.pdf';
+import { Button } from '@material-ui/core'
 
 const Introduction = (
     <div className='about_me description_info'>
-        <p> Hello, my name is Thinh Phan, and I am a full stack web developer.</p>
-        <p> I enjoy creating products that help to improve quality of life.
-            I love the logic and structure of coding, and I am always seeking opportunities to
-            leverage my knowledge.
+        <p> Hello, my name is Thinh Phan, and I am a full-stack web developer.</p>
+        <p> I enjoy creating products that help to improve the quality of life.
+            I love the logic and structure of coding, and I am always seeking opportunities to leverage my knowledge.
         </p>
         <p>
-            I have experiences in Computer and Web applications in various programming languages
-            especially in Javascript, Typescript, HTML, CSS, SCSS, Java and Python. 
+            I have experience in Web applications in various programming languages,
+            especially in Javascript, Typescript, HTML, CSS, SCSS, Java, and Python.
         </p>
         <p>
-            I have demonstrated experience in a diverse set of web development tools such as React,
-            Redux, Material-UI, NodeJS, Express, SQL, and also REST API, authentication for Full Stack Web Application.
+            I have demonstrated experience in a diverse set of web development tools such as React, Redux, Material-UI,
+            NodeJS, Express, SQL, REST API, and authentication for Full Stack Web Application.
         </p>
+        <a className="resume_download" href={resume} target="_blank" rel="noopener noreferrer">
+            <Button variant='contained' color='primary'>Resume</Button>
+        </a>
+        
     </div>
 )
 

@@ -91,6 +91,14 @@
     margin-top: 90px;
 }
 
+.description_info button {
+    margin-top: 30px;
+}
+.resume_download {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 568px) {
     .about_container {
         flex-direction: column;
